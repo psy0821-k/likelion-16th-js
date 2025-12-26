@@ -10,8 +10,11 @@
 true;
 false;
 // 터미널 값 출력
+console.log(123);
+console.log("짱구는 못말려");
+console.log(true);
 
 // 주석 한 줄 (single line comment)
 
-// 여러 줄
-// 주석 작성 (multi line comment)
+/* 여러 줄 주석 작성 
+(multi line comment)*/
