@@ -196,18 +196,34 @@ function 커피만들기(원두, 물,얼음){
 
 // --------------------------------------------------------------------------
 // typeof 연산자
+// 데이터의 타입을 확인 할 떄 사용
 // --------------------------------------------------------------------------
-
 // 기본 타입
+console.group("primitive----------------------------------------------");
 // * null
-// * undefined
-// * String
-// * Number
-// * Boolean
-// * BigInt(9000조 이상 매우큰 수)
-// * Symbol(고유의 값)
+console.log(typeof null);
 
+// * undefined
+console.log(typeof undefined);
+// * String
+console.log(typeof "sadas");
+// * Number
+console.log(typeof 1234);
+// * Boolean
+console.log(typeof true);
+// * BigInt(9000조 이상 매우큰 수)
+console.log(typeof 1000n);
+// * Symbol(고유의 값)
+console.log(typeof Symbol("123123"));
+console.groupEnd()
+
+console.group("reference type--------------------------------------------");
 // 참조 타입
+
 // * Object
+console.log(typeof(커피_메뉴));
 // * Array
+console.log(typeof(장바구니));
 // * Function
+console.log(typeof(커피만들기));
+console.groupEnd()
