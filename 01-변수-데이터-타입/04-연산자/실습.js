@@ -319,26 +319,32 @@ console.log(0 !== '0');
 let is_member = true
 let purchase_amount = 50000
 // 멤버이고 구매 금액이 3만원 이상인 경우, 할인 적용
-let has_discount
+let has_discount = is_member && purchase_amount >3e4
+console.log(has_discount);
 
 // 예제: 접근 권한 조건
 let is_admin = false
 let is_owner = true
 // 관리자이거나 주인인 경우, 접근 허용
-let can_access
+let can_access = is_owner || is_admin
 
 // 예제: 신선 유지 온도 조건
 let temperature = 25
 // 온도가 18도 이상 26도 이하인 경우, 신선 유지
-let keep_fresh
+let keep_fresh = 18 <= temperature && temperature <= 26
+console.log(keep_fresh);
 
 
 // --------------------------------------------------------------------------
 // 연산자 우선 순위
 // --------------------------------------------------------------------------
 // 1. 괄호가 최우선
+
+console.log( 3 * (4+3));
 // 2. 곱셈/나눗셈이 덧셈/뺄셈보다 우선
+console.log( 3 / 4 + 3);
 // 3. 왼쪽에서 오른쪽으로
+console.log( 3 / 4 * 3);
 // 4. 할당은 가장 나중
 
 
@@ -346,6 +352,11 @@ let keep_fresh
 // 주의사항
 // --------------------------------------------------------------------------
 // * 문자열 + 숫자 (문자)
+console.log(10+"04");
 // * 문자열 - 숫자 (숫자)
+console.log(10-"04");
 // * 문제 해결 방법 (문자 → 숫자 변환 후 연산)
+console.log(Number(10) - Number("04"));
 // * 증가, 감소 연산자 위치 (전/후)
+
+// Number 은 명시적으로 표현하기 위해 작성한 키워드이다.
