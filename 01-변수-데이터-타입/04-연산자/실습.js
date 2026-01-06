@@ -46,9 +46,12 @@ console.log(21 % 12)
 // --------------------------------------------------------------------------
 
 // 문자열 + 문자열
-
+const firstName = "성윤"
+const lastName = "박"
+console.log(lastName + firstName);
 // 문자열 + 숫자 (숫자가 문자열로 변환됨)
-
+const myFavoritNumber = 7;
+console.log(firstName + myFavoritNumber);
 // 숫자 + 문자열
 
 
@@ -166,12 +169,24 @@ console.log(--count);
 // 모든 조건이 true여야 true
 
 // 예제: 로그인 & 권한 검증
-let is_logged_in
-let has_permission
+let is_logged_in = false
+let has_permission = false
 // 로그인 ❌ 권한 ❌ 출력 결과: false
+console.log(is_logged_in && has_permission);
+
+is_logged_in = true
+has_permission = false
 // 로그인 ✅ 권한 ❌ 출력 결과: false
+console.log(is_logged_in && has_permission);
 // 로그인 ❌ 권한 ✅ 출력 결과: false
+
+is_logged_in = false
+has_permission = true
+console.log(is_logged_in && has_permission)
+
 // 로그인 ✅ 권한 ✅ 출력 결과: true
+is_logged_in = true
+console.log(is_logged_in && has_permission)
 
 
 // --------------------------------------------------------------------------
@@ -186,9 +201,25 @@ let has_permission
 let is_handsome
 let is_rich
 // 잘생김 ❌ 부자 ❌ 출력 결과: false
+is_handsome = false
+is_rich = false
+
+console.log(is_handsome || is_rich);
 // 잘생김 ❌ 부자 ✅ 출력 결과: true
+is_handsome = false
+is_rich = true
+
+console.log(is_handsome || is_rich);
 // 잘생김 ✅ 부자 ❌ 출력 결과: true
+is_handsome = true
+is_rich = false
+
+console.log(is_handsome || is_rich);
 // 잘생김 ✅ 부자 ✅ 출력 결과: true
+is_handsome = true
+is_rich = true
+
+console.log(is_handsome || is_rich);
 
 
 // --------------------------------------------------------------------------
@@ -198,27 +229,40 @@ let is_rich
 // 반대로 변환
 let truthy = true
 // 출력 결과: false
-let reverse_truthy
+let reverse_truthy = !truthy
+
+console.log(reverse_truthy);
+
 
 let falsy = false
 // 출력 결과: true
-let reverse_falsy
+let reverse_falsy = !falsy
+console.log(reverse_falsy);
 
 // 예제: 로그인 상태 반전
 // 출력 결과: is_logged_in 값 반전
-let is_logged_out
+let is_logged_out = !is_logged_in
+console.log(is_logged_out);
 
 // 이중 부정 (!!) - boolean 변환 (Boolean() 대체)
 // '자바스크립트'
+console.log(Boolean('자바스크립트'));
 // '' 변환 출력 결과: false
+console.log(!!(''));
 // ' ' 변환 출력 결과: true
+console.log(!!' ');
 // 0 변환 출력 결과: false
+console.log(!!0);
 // '0' 변환 출력 결과: true
+console.log(!!'0');
 // 1 변환 출력 결과: true
+console.log(!!1);
 // '1' 변환 출력 결과: true
+console.log(!!"1");
 // null 변환 출력 결과: false
+console.log(!!null);
 // undefined 변환 출력 결과: false
-
+console.log(!!undefined);
 
 // --------------------------------------------------------------------------
 // [비교 연산] 크기 비교
@@ -226,18 +270,27 @@ let is_logged_out
 
 // 숫자 비교
 // * 10이 5보다 큼
+console.log(10 > 5);
 // * 10이 5보다 작지 않음
+console.log(10 < 5);
 // * 10이 10보다 크거나 같음
+console.log(10 >= 10);
 // * 10이 5보다 작거나 같지 않음
+console.log(10 <= 5);
 
 // 문자열 비교 (사전순)
 // * 'a', 'b' 비교
+console.log('a' > 'b');
 // * 'apple', 'banana' 비교
+console.log('apple' < 'banana');
 // * 'A', 'a' 비교 (대문자가 소문자보다 작음)
+console.log('a' > 'A');
 
 // 문자열과 숫자 비교 (문자열이 숫자로 변환됨)
 // * '10'이 5보다 큼
+console.log('10' > 5);
 // * '100'이 '20'보다 작음 (문자열끼리 비교하면 사전순!)
+console.log('100' > '200');
 
 
 // --------------------------------------------------------------------------
@@ -245,13 +298,17 @@ let is_logged_out
 // --------------------------------------------------------------------------
 // * == (동등): 값만 비교 (타입 변환 후 비교)
 // * === (일치): 타입과 값 모두 비교
-
+console.log(0 == '0');
+console.log(0 == Number('0'));
+console.log(0 === '0');
 
 // --------------------------------------------------------------------------
 // [비교 연산] 불일치 비교
 // --------------------------------------------------------------------------
 // * != (불일치): 값만 비교
+console.log(0 != '0');
 // * !== (불일치): 타입과 값 모두 비교
+console.log(0 !== '0');
 
 
 // --------------------------------------------------------------------------
