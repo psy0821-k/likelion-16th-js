@@ -201,7 +201,7 @@ function 커피만들기(원두, 물,얼음){
 // 기본 타입
 console.group("primitive----------------------------------------------");
 // * null
-console.log(typeof null);
+console.log(typeof null); // object 버그 고칠 수 없음
 
 // * undefined
 console.log(typeof undefined);
@@ -225,5 +225,5 @@ console.log(typeof(커피_메뉴));
 // * Array
 console.log(typeof(장바구니));
 // * Function
-console.log(typeof(커피만들기));
+console.log(typeof(커피만들기)); // 호출이 가능해서 function으로 표기
 console.groupEnd()
