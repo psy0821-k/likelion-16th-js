@@ -226,21 +226,27 @@ console.log(Number.isNaN({}));
 // --------------------------------------------------------------------------
 // Falsy & Truthy
 // --------------------------------------------------------------------------
+// 유효성 검사 시 
 // * Falsy 값 (6가지): 0, '', false, null, undefined, NaN
 // * 나머지 값은 모두 Truthy
 // --------------------------------------------------------------------------
 
 // 출력 결과: 0 → false
-
+console.log(!!0);
 // 출력 결과: '' → false
+console.log(!!'');
 
 // 출력 결과: false → false
+console.log(false);
 
 // 출력 결과: null → false
+console.log(!!null);
 
 // 출력 결과: undefined → false
+console.log(!!undefined);
 
 // 출력 결과: NaN → false
+console.log(!!NaN);
 
 // --------------------------------------------------------------------------
 // 권장 사항
@@ -249,3 +255,7 @@ console.log(Number.isNaN({}));
 // * 숫자 변환: Number() 또는 parseInt()/parseFloat()
 // * NaN 확인: Number.isNaN() 사용
 // --------------------------------------------------------------------------
+
+
+// const nextYear = prompt('내년 연도를 입력해주세요.', '2026')
+// console.log(Number(nextYear) + 1 + '년')
