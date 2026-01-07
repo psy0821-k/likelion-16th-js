@@ -102,6 +102,14 @@ hexCode += blueHexValue
 
 const tempHexCode = '#' + red.toString(16).padStart(2, '0') + green.toString(16).padStart(2, '0') + blue.toString(16).padStart(2, '0')
 console.log(tempHexCode)
+
+// 다시 10진수로
+// 색상 코드(컴퓨터, 16진수) → 색상 값(일상, 10진수) 변환
+const redHex = 'ff', greenHex = '80', blueHex = '00'
+
+console.log(parseInt(redHex, 16))
+console.log(parseInt(greenHex, 16))
+console.log(parseInt(blueHex, 16))
 // --------------------------------------------------------------------------
 // 숫자 → 불리언 변환
 // --------------------------------------------------------------------------
@@ -109,14 +117,24 @@ console.log(tempHexCode)
 // --------------------------------------------------------------------------
 
 // 출력 결과: 0 → false
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
+console.log(Boolean(''));
+console.log(Boolean(""));
 
 // 출력 결과: 1 → true
+console.log(Boolean(1));
 
 // 출력 결과: -1 → true
+console.log(Boolean(-1));
 
 // 출력 결과: 0.1 → true
+console.log(Boolean(0.1));
 
 // 출력 결과: -0.1 → true
+console.log(Boolean(-0.1));
 
 // --------------------------------------------------------------------------
 // 문자 → 불리언 변환
@@ -125,10 +143,13 @@ console.log(tempHexCode)
 // --------------------------------------------------------------------------
 
 // 출력 결과: '' → false
+console.log(Boolean(''));
 
 // 출력 결과: ' ' → true
+console.log(Boolean(' '));
 
 // 출력 결과: '0' → true
+console.log(Boolean('0'));
 
 // --------------------------------------------------------------------------
 // 숫자가 아님(NaN): 숫자 연산 실패 시, 생성
@@ -143,22 +164,26 @@ console.log(tempHexCode)
 // --------------------------------------------------------------------------
 
 // 출력 결과: Math.sqrt(-1) → NaN
-
+console.log(Math.sqrt(-1));
 // 출력 결과: 숫자 + NaN → NaN
+console.log(Math.sqrt(-1) + parseFloat("반가워"));
 
 // 출력 결과: undefined + undefined → NaN
-
+let t, u
+console.log(t +u);
 // 출력 결과: 문자 / 숫자 → NaN
-
+console.log("asv" / 2);
 // 출력 결과: Number(str) → NaN
-
+console.log(Number("abc"));
 // 출력 결과: parseInt(str) → NaN
+console.log(parseInt("abc"));
 
 // 출력 결과: parseFloat(str) → NaN
-
+console.log(parseFloat("누구세용"));
 // 출력 결과: 0 / 0 → NaN
-
+console.log(0/0);
 // 출력 결과: Infinity - Infinity → NaN
+console.log(Infinity - Infinity);
 
 // --------------------------------------------------------------------------
 // NaN 확인
@@ -171,7 +196,6 @@ console.log(tempHexCode)
 // 출력 결과: typeof NaN → 'number' (⚠️ NaN이지만, number 타입으로 인식)
 
 // 출력 결과: isNaN(1) → false (✅ NaN 아님)
-
 // 출력 결과: isNaN('3') → false (✅ NaN 아님)
 
 // 출력 결과: isNaN([]) → false (✅ NaN 아님)
@@ -179,18 +203,25 @@ console.log(tempHexCode)
 // 출력 결과: isNaN(null) → false (✅ NaN 아님)
 
 // 출력 결과: isNaN(NaN) → true (✅ NaN 맞음)
+console.log(isNaN(NaN));
 
 // 출력 결과: isNaN('3n') → true (⚠️ NaN 맞음? 부정확한 이유: 타입 변환 후, 검사)
+console.log(isNaN('3n'));
 
 // 출력 결과: isNaN(undefined) → true (⚠️ NaN 맞음?)
+console.log(isNaN(undefined));
 
 // 출력 결과: isNaN({}) → true (⚠️ NaN 맞음?)
+console.log(isNaN({}));
 
 // 출력 결과: Number.isNaN('3n') → false (✅ NaN 아님, 정확한 이유: 타입 변환 없이 검사)
+console.log(Number.isNaN('3n'));
 
 // 출력 결과: Number.isNaN(undefined) → false (✅ NaN 아님)
+console.log(Number.isNaN(undefined));
 
 // 출력 결과: Number.isNaN({}) → false (✅ NaN 아님)
+console.log(Number.isNaN({}));
 
 // --------------------------------------------------------------------------
 // Falsy & Truthy
