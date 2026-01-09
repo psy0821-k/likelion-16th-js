@@ -148,3 +148,10 @@ console.log(richMan);
 // 2. 매개변수가 1개면 소괄호 생략 가능, 0개거나 2개 이상이면 필수입니다.
 // 3. 중괄호 {}를 생략하면 return 없이도 값이 자동으로 반환(암묵적 반환)됩니다.
 // 4. 객체를 바로 반환할 때는 소괄호 ()로 감싸주어야 합니다.
+
+const tem = () => 10;
+const logger = message => message
+console.log(logger('화살표 방향으로 이동해보세요!'));
+const pxToRem = pxValue => parseFloat(pxValue) / 16 + 'rem'
+const persentage = (n1,n2) => n1 / n2 * 100 + "%"
+console.log(persentage(312,425));

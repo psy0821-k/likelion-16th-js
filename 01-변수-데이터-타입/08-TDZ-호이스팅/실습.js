@@ -169,3 +169,4 @@ console.log('끝났습니다!') // 5
 
 const job = '개발자'
 console.log('내 직업은 ' + job + '입니다.')  // undefined 출력됨
+
